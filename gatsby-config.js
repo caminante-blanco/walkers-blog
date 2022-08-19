@@ -1,21 +1,20 @@
 module.exports = {
   siteMetadata: {
-    title: `walker's blog`,
-    siteUrl: `https://www.yourdomain.tld`
+    title: `Walker's blog`,
+    siteUrl: `https://www.yourdomain.tld`,
   },
-  plugins: ["gatsby-plugin-image", "gatsby-plugin-sitemap", "gatsby-plugin-mdx", "gatsby-plugin-sharp", "gatsby-transformer-sharp", {
-    resolve: 'gatsby-source-filesystem',
+  plugins: [
+    "gatsby-plugin-image",
+    "gatsby-plugin-sitemap",
+    "gatsby-plugin-mdx",
+    "gatsby-plugin-sharp",
+    "gatsby-transformer-sharp",
+   {
+    resolve: "gatsby-source-filesystem",
     options: {
-      "name": "images",
-      "path": "./src/images/"
+      name: `blog`,
+      path: `${__dirname}/blog`,
+   }
     },
-    __key: "images"
-  }, {
-    resolve: 'gatsby-source-filesystem',
-    options: {
-      "name": "pages",
-      "path": "./src/pages/"
-    },
-    __key: "pages"
-  }]
+  ],
 };
